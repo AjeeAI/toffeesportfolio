@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* Our Digital Curator Color Palette */
+  --color-background: #131313;
+  --color-surfaceLowest: #0e0e0e;
+  --color-surfaceLow: #1c1b1b;
+  --color-surfaceHighest: #353534;
+  --color-primary: #d2bbff;
+  --color-primaryContainer: #7c3aed;
+  --color-onSurface: #e5e2e1;
+  --color-secondaryVariant: #523787;
+
+  /* Editorial Fonts */
+  --font-sans: var(--font-manrope), sans-serif;
+  --font-serif: var(--font-newsreader), serif;
+
+  /* Ambient Box Shadow */
+  --shadow-ambient: 0 0 40px 0 rgba(210, 187, 255, 0.06);
+  
+  /* Glass Gradient */
+  --background-image-button-gradient: linear-gradient(135deg, #7c3aed, #523787);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom Typography Utilities (Tailwind v4 specific) */
+@utility text-display-lg {
+  font-size: 3.5rem;
+  letter-spacing: -0.02em;
 }
 
+@utility text-headline-lg {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+@utility text-title-lg {
+  font-size: 1.375rem;
+  letter-spacing: 0.02em;
+}
+
+@utility text-body-lg {
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+@utility text-label-md {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Base Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-onSurface);
 }
