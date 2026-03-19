@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Toffee's Developer Portfolio
 
-## Getting Started
+**Toffee's Portfolio** is a modern, highly interactive personal developer portfolio built to showcase creative engineering, professional experience, and selected works. Engineered with the latest Next.js App Router architecture and TypeScript, the platform prioritizes fluid user experiences, custom animations, and clean modular design.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Interactive UI/UX:** Features advanced interaction patterns including a custom `ProjectCursor` that enhances the visual experience when browsing the portfolio's selected works.
+* **Scrollspy Navigation:** Implements a custom `useScrollspy` React hook to dynamically update the active state of the navigation menu based on the user's scroll position, providing a seamless Single Page Application (SPA) feel.
+* **Modular Content Sections:** Neatly categorizes the developer's profile into reusable components: `Hero`, `About`, `Experience`, `SelectedWorks`, and `Testimonials`.
+* **Centralized Animation Logic:** Manages complex UI transitions and entrance animations through a dedicated `lib/animations.ts` file to keep component code clean and maintainable.
+* **Backend Integration:** Integrated with Firebase (`lib/firebase.ts`) to handle dynamic data storage or secure contact form submissions directly from the client.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗️ System Architecture
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Framework:** Utilizes Next.js with the modern `app/` directory routing system (`layout.tsx`, `page.tsx`) for optimal server-side rendering (SSR) and static site generation (SSG).
+* **Language:** Strictly typed with TypeScript (`tsconfig.json`) to ensure code reliability and predictable component prop passing.
+* **Global Styling:** Managed via `globals.css` and PostCSS, likely wrapping a utility-first CSS framework like Tailwind CSS for rapid, responsive UI development.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+* **Frontend Framework:** Next.js (React)
+* **Language:** TypeScript
+* **Backend/BaaS:** Firebase
+* **Styling Tools:** PostCSS
+* **Code Quality:** ESLint (`eslint.config.mjs`)
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
+* Node.js (v18+)
+* npm, yarn, or pnpm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation & Execution
 
-## Deploy on Vercel
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/yourusername/toffeesportfolio.git](https://github.com/yourusername/toffeesportfolio.git)
+    cd toffeesportfolio
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **Environment Variables:** Create a `.env.local` file at the root to include necessary Firebase configuration keys if required by `lib/firebase.ts`.
+
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will launch on `http://localhost:3000`.
+
+---
+## 👨‍💻 About the Project
+This repository highlights a strong command of modern React ecosystems, combining visually compelling frontend architectures (Next.js, custom hooks, centralized animations) with secure, cloud-based data handling via Firebase.
